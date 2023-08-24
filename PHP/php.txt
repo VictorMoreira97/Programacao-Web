@@ -1,0 +1,28 @@
+PHP: Hypettext Preprocessor
+
+linguagem scrip: software livre
+PHP são executados em servidores
+Dá cuporte a vários servidores de bancos de dados
+Livre para ser baixado e usado
+Sintaxe similar a linguagens como C e Java
+
+softwares: o servidor que dará suporte a PHP (local ou remoto) deverá possuir os seguintes softwares
+1. Um servidor PHP 
+2. O PHP
+3. Um SGBD (Software de Gestão de Banco de Dados) - Opcional
+    Necessário para apps que realizam operações CRUD em banco de dados
+    MySQL - SGBD difundido para uso agregado em banco de dados
+
+Servidor HTTP (servidor Web)
+
+Programa responsável por aceitar requisições HTTP de clientes, geralmente navegadores, e servi-los com respostas HTTP
+
+Servidro HTTP padrão para scripts PHP: Apache servidores
+
+Software colaborativo (livre), potável e pouco exigente com recursos de Hardware
+
+Gerenciado por um grupo mundial de voluntários
+
+Fundação Apache Software provê o suporte financeiro, legal e organizacional para o Apache
+
+PHP deve estar instalado em um servidor para que a linguagem seja reconhecida
