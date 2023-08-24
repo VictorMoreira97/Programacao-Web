@@ -26,3 +26,11 @@ Gerenciado por um grupo mundial de voluntários
 Fundação Apache Software provê o suporte financeiro, legal e organizacional para o Apache
 
 PHP deve estar instalado em um servidor para que a linguagem seja reconhecida
+
+
+<?php 
+
+    echo "Hello Wolrd"
+
+?>
+
