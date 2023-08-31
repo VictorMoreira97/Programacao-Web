@@ -27,6 +27,18 @@ Fundação Apache Software provê o suporte financeiro, legal e organizacional p
 
 PHP deve estar instalado em um servidor para que a linguagem seja reconhecida
 
+C:\xampp\htdocs
+C:\xampp\htdocs\ProgramacaoWeb\PHP
+http://localhost/ProgramacaoWeb/PHP/index02.php
+
+Tipos de variáveis
+    Booleano  -- True/False
+    Numperico -- Int ou Float
+    Char      -- 'A' -> Caracter
+    String    -- "Sequência de caracteres encadeadas"
+    Array     -- array()
+    Callback  -- Função passada por parâmetro
+    Null      -- Variável sem valor
 
 <?php 
 
