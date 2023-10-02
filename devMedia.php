@@ -1,35 +1,21 @@
 <?php 
 
-$x = 0;
-$y = 0;
+function torreDeHanoi($discos, $pino1, $pino2, $pino3) {
+    if ($discos == 1) {
+        echo "Movendo o disco $discos do pino $pino1 para o pino $pino2";
 
-$direcaoX = 1;
-$direcaoY = 1;
-
-$largura = 800;
-$altura = 600;
-
-$frame = 0;
-
-if ($frame < 1000) {
-    if ($x >= $largura) {
-        $direcaoX *= -1;
-    } else if ($x <= 0) {
-        $direcaoX *= 1;
+        return;
     }
+
+    torreDeHanoi ($discos - 1, $pino1, $pino3, $pino2);
+
+    echo "Movendo o disco $discos do pino $pino1 para o pino $pino2";
+
+    return($discos - 1, $pino3, $pino2, $pino3);
 }
 
-if ($y >= $altura) {
-    $direcaoY *= -1;
-} else if ($y <= 0) {
-    $direcaoY *= 1;
-}
+$discos = 4;
 
-$x += $direcaoX;
-$y += $direcaoY;
-
-desenha($x, $y) {
-    echo "$x $y";
-}
+torreDeHanoi($discos, 'A', 'C', 'B');
 
 ?>
