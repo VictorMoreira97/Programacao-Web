@@ -1,21 +1,28 @@
 <?php 
 
-function torreDeHanoi($discos, $pino1, $pino2, $pino3) {
-    if ($discos == 1) {
-        echo "Movendo o disco $discos do pino $pino1 para o pino $pino2";
+$tarifa = 0.14;
 
-        return;
-    }
+$idCidade = 54;
 
-    torreDeHanoi ($discos - 1, $pino1, $pino3, $pino2);
-
-    echo "Movendo o disco $discos do pino $pino1 para o pino $pino2";
-
-    return($discos - 1, $pino3, $pino2, $pino3);
+switch ($idCidade) {
+    case 1: 
+        $tarifa = 0.16;
+        break;
+    case 52:
+        $tarifa = 0.08;
+        break;
+    case 54:
+        $tarifa = 0.24;
+        break;
+    case 200:
+        $tarifa = 0.33;
+        break;
 }
 
-$discos = 4;
+$ligacoes = 514;
 
-torreDeHanoi($discos, 'A', 'C', 'B');
+$valor = $ligacoes * $tarifa;
+
+echo "Valor a pagar R$ $valor";
 
 ?>
