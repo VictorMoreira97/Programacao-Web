@@ -7,16 +7,25 @@ switch($_REQUEST["acao"]) {
             $celular = $_POST["celular"];
             $cidade = $_POST["cidade"];
 
-            $sql = "INSERT INTO usuario(nome, email, senha, data_nasc) VALUES ('{$nome}', '{$email}', '{$celular}', '{$cidade}')";
+            $sql = "INSERT INTO usuario (nome, email, celular, cidade) VALUES ('{$nome}', '{$email}', '{$celular}', '{$cidade}')";
 
-        $res = $conn -> query($sql);
+            $res = $conn->query($sql);
+            break;
+
+        if($res==true) {
+            print "<script>alert('Cadastro com sucesso');</script>";
+            print "<script>location.href='?page=listar';</script>";
+        } else {
+            print "<script>alert('Não foi possível cadastrar');</script>";
+            print "<script>location.href='?page=listar';</script>";
+        }
 
         break;
     case 'editar':
-
+        // code
         break;
     case 'excluir':
-
+        // code
         break;
 }
 
