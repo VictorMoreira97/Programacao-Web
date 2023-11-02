@@ -1,65 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Heróis</title>
+    <title>CRUD PHP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <h1>SuperHeroes</h1>
-        <a href="#">Adicionar Superhero</a>
-        <table border="1"></table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Secret Identity</th>
-                <th>First Appearance</th>
-                <th>Arch Enemy</th>
-                <th>Main Power</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-    <?php 
-    
-    $conn = new mysqli("localhost: 3306", "", "superhero_db");
-
-    //verificar se há conexão
-    if($conn -> connect_error) {
-        die("Falha ao conectar o banco". $conn -> connect_error);
-    }
-
-    //Consultar registros no banco de dados
-    //Primeiro eu escrevo um script de seleção dos registros;
-
-    $sql = "SELECT * FROM superheroes";
-
-    // Depois armazeno resgistros em uma variável;
-
-    $result = $conn -> query("sql");
-
-    if($result -> num_rows > 0) {
-        while($row = $result -> fetch_assoc()) {
-            echo "<tr>";
-                echo "<td>" . $row['id']."</td>";
-                echo "<td>" . $row['heroName']."</td>";
-                echo "<td>" . $row['secreteIdentity']."</td>";
-                echo "<td>" . $row['firstAppearance']."</td>";
-                echo "<td>" . $row['archEnemy']."</td>";
-                echo "<td>" . $row['mainPower']."</td>";
-
-                echo "<td><a href='readById.php?id='".$row[id].">Info</a>
-                echo "<td><a href='update.php?id='".$row[id].">Edit</a>
-                echo "<td><a href='readById.php?id='".$row[id]."'onclick='return confirm(\"Certeza que deseja excluir o registro?\")>Delete</a></td>";
-            echo "</tr>";
-        }
-    } else {
-        echo "<tr><td colspan='7'></td></tr>";
-    }
-
-    ?>
-    </main>
+    <header>
+        <h1>CADASTRO CLIENTES</h1>
+    </header>
 </body>
+    <main>
+    <button>Cadastrar Clientes</button>
+    <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>Pedro</td>
+                    <td>pedro@gmail.com</td>
+                    <td>(+55) 83 99602-2317</td>
+                    <td>João Pessoa</td>
+                    <td>
+                        <button type="button" class="button green">Editar</button>
+                        <button type="button" class="button red">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>maria@gmail.com</td>
+                    <td>(+55) 83 99802-2347</td>
+                    <td>Campina Grande</td>
+                    <td>
+                        <button type="button" class="button green">Editar</button>
+                        <button type="button" class="button red">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>José</td>
+                    <td>jose@gmail.com</td>
+                    <td>(+55) 83 98603-2398</td>
+                    <td>Recife</td>
+                    <td>
+                        <button type="button" class="button green">Editar</button>
+                        <button type="button" class="button red">Excluir</button>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+        </main>
 </html>
