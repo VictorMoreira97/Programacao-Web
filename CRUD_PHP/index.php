@@ -36,6 +36,9 @@
         case "salvar":
             include("salvar_cliente.php");
         break;
+        case "editar":
+            include("editar_clientes.php");
+        break;
     }
     
     ?>

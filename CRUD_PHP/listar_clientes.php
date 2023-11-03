@@ -41,7 +41,8 @@
             print "<td> " . $row -> cidade . " </td>";
 
             print "<td>
-                    <button>Editar</button>
+                    <button onclick=\"location.href='?page=editar&nome=".$row->nome."';\">Editar</button>
+                    <button>Excluir</button>
                 </td>";
 
             print "</tr>";
