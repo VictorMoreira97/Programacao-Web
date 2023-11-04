@@ -1,6 +1,6 @@
 <?php 
 
-switch($_REQUEST["acao"]) {
+switch(@$_REQUEST["acao"]) {
     case 'cadastrar':
             $nome = $_POST["nome"];
             $email = $_POST["email"];
@@ -10,17 +10,16 @@ switch($_REQUEST["acao"]) {
             $sql = "INSERT INTO usuario (nome, email, celular, cidade) VALUES ('{$nome}', '{$email}', '{$celular}', '{$cidade}')";
 
             $res = $conn->query($sql);
+
+            if($res==true) {
+                print "<script>alert('Cadastro com sucesso');</script>";
+                print "<script>location.href='?page=listar';</script>";
+            } else {
+                print "<script>alert('Não foi possível cadastrar');</script>";
+                print "<script>location.href='?page=listar';</script>";
+            }
+
             break;
-
-        if($res==true) {
-            print "<script>alert('Cadastro com sucesso');</script>";
-            print "<script>location.href='?page=listar';</script>";
-        } else {
-            print "<script>alert('Não foi possível cadastrar');</script>";
-            print "<script>location.href='?page=listar';</script>";
-        }
-
-        break;
 
     case 'editar':
         
@@ -29,16 +28,15 @@ switch($_REQUEST["acao"]) {
         $celular = $_POST["celular"];
         $cidade = $_POST["cidade"];
 
-        $sql = "UPDATE usuarios SET
+        $sql = "UPDATE usuario SET
                 nome='{$nome}',
                 email='{$email}',
-                celular='{$senha}',
+                celular='{$celular}',
                 cidade='{$cidade}'
                 WHERE 
                 id=".$_REQUEST["id"];
 
         $res = $conn->query($sql);
-            break;
 
         if($res==true) {
             print "<script>alert('Editado com sucesso');</script>";
@@ -52,6 +50,8 @@ switch($_REQUEST["acao"]) {
 
     case 'excluir':
         $sql = "DELETE FROM usuario WHERE id=".$_REQUEST["id"];
+
+        $res = $conn->query($sql);
 
         if($res==true) {
             print "<script>alert('Excluido com sucesso');</script>";
