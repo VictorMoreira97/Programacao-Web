@@ -15,19 +15,27 @@
 
             <input type="hidden" name="acao" value="cadastrar">
 
-            <label for="">Nome: </label>
-            <input type="text" name="nome" placeholder="Digite o nome do cliente"> <br>
+            <div class="inputDiv">
+                <label for="">Nome: </label>
+                <input type="text" name="nome" placeholder="Digite o nome do cliente"> <br>
+            </div>
 
-            <label for="">e-mail</label>
-            <input type="email" name="email" id="" placeholder="Digite o e-mail do cliente"> <br>
+            <div class="inputDiv">
+                <label for="">e-mail:</label>
+                <input type="email" name="email" id="" placeholder="Digite o e-mail do cliente"> <br>
+            </div>
 
-            <label for="">Celular</label>
-            <input type="number" name="celular" id="" placeholder="Digite o Nº de celular do cliente"> <br>
+            <div class="inputDiv">
+                <label for="">Celular:</label>
+                <input type="number" name="celular" id="" placeholder="Digite o Nº de celular do cliente"> <br>
+            </div>
 
-            <label for="">Cidade</label>
-            <input type="text" name="cidade" placeholder="Digite a cidade do cliente"> <br>
+            <div class="inputDiv">
+                <label for="">Cidade:</label>
+                <input type="text" name="cidade" placeholder="Digite a cidade do cliente"> <br>
+            </div>
 
-            <input type="submit" value="Cadastrar"> <br>
+            <input type="submit" value="Cadastrar" class="btnCadastrar"> <br>
         </form>
     </main>
 

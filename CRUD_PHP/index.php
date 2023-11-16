@@ -12,9 +12,9 @@
     <header>
         <h1>CADASTRO DE CLIENTES</h1>
         <nav>
-            <button type="button" class="button blue"><a href="index.php">HOME</a></button>
-            <button type="button" class="button blue"><a href="?page=novo">NOVO CLIENTE</a></button>
-            <button type="button" class="button blue"><a href="?page=listar">LISTAR CLIENTES</a></button>
+            <a href="index.php">HOME</a>
+            <a href="?page=novo">NOVO CLIENTE</a>
+            <a href="?page=listar">LISTAR CLIENTES</a>
         </nav>
     </header>
 

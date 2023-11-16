@@ -11,7 +11,7 @@
 <body>
 
     <main>
-        <h2>LISTAR USUÁRIOS</h2>
+        <h2 class="listar-usuario">LISTAR USUÁRIOS</h2>
       <?php 
       
       $sql = "SELECT * FROM usuario";
@@ -21,13 +21,14 @@
       $qtd = $res -> num_rows;
 
       if($qtd > 0) {
-        print "<table>";
+        print "<table border='1'>";
             print "<tr>";
             print "<th>ID</th>";
             print "<th>NOME</th>";
             print "<th>E-MAIL</th>";
             print "<th>CELULAR</th>";
             print "<th>CIDADE</th>";
+            print "<th>AÇÃO</th>";
             print "</tr>";
         while($row = $res -> fetch_object()) {
             print "<tr>";
@@ -38,9 +39,9 @@
             print "<td> " . $row -> cidade . " </td>";
 
             print "<td>
-                    <button onclick=\"location.href='?page=editar&id=".$row->id."';\">Editar</button>
+                    <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btnActionEdit'>Editar</button>
 
-                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\">Excluir</button> 
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btnActionDelet'>Excluir</button> 
                 </td>";
             print "</tr>";
         }
