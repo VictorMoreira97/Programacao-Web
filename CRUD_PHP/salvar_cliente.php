@@ -1,5 +1,5 @@
 <?php 
-
+ 
 switch(@$_REQUEST["acao"]) {
     case 'cadastrar':
             $nome = $_POST["nome"];

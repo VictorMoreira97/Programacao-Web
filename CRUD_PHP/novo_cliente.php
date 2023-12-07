@@ -6,7 +6,7 @@
     <title>CRUD PHP</title>
 
     <link rel="stylesheet" href="style.css">
-
+ 
 </head>
 <body>
 
